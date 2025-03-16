@@ -64,6 +64,6 @@ function greetingFunc() {
     E.innerHTML = greeting;
 }
 
-// if (window.location.href.includes("index.html")){
-//     greetingFunc();
-// }
+if (window.location.href.includes("index.html") || window.location.pathname === "/"){
+    greetingFunc();
+}
