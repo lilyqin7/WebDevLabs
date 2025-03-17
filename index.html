@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script defer src="./static/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <meta name="author" content="Lily">
     <meta name="keywords" content="Carnegie Mellon University, Information Systems">
     <meta name="description" content="Lily's Professional Website">
     <title>Lily Qin</title>
 </head>
-<body style="font-family: Arial">
-    <header style="color:blue; background:lightblue">
-        <h1>Lily Qin</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="views\cv.html">CV</a>
-            <a href="views\contact.html">Contact Me</a>
-            <a href="views\fun.html">For Fun</a>
-        </nav>
+<body onload="addYear()">
+    <header>
+        <h1 id="header">Lily Qin</h1>
     </header>
+    <nav>
+        <a href="index.html" class="navlinks">Home</a>
+        <a href="views/cv.html" class="navlinks">CV</a>
+        <a href="views/contact.html" class="navlinks">Contact Me</a>
+        <a href="views/fun.html" class="navlinks">For Fun</a>
+    </nav>
     <div class = "main">
-        <h2>
-            <p>Hi, my name is Lily</p>
-        </h2>
-        <img src = "static\1000029272.jpg" alt = "Lily Qin" width = "200">
+        <h2 id="greeting"></h2>
+        <img src = "static/1000029272.jpg" alt = "Lily Qin" width = "200">
         <p id="intro">
             Hi! My name is Lily and I am a current freshman at Carnegie Mellon University studying Information Systems.
         </p>
+        <p id="fullBio">
+            I am interested in technology and design.
+        </p>
+        <button id="ReadMoreBTN">Read More</button>
+        <button id="ReadLessBTN">Read Less</button>
     </div>
     <footer>
-        <p>&copy; 2025 Lily Qin. All rights reserved.</p>
+        <p>&copy;<span id="copyYear"></span>Lily Qin. All rights reserved.</p>
     </footer>
 </body>
 </html>

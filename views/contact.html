@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script defer src="../static/script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <meta name="author" content="Lily">
     <meta name="keywords" content="Carnegie Mellon University, Information Systems">
     <meta name="description" content="Lily's Professional Website">
     <title>Lily Qin</title>
 </head>
-<body style="font-family: Arial">
+<body onload="addYear()">
     <header>
-        <h1>Lily Qin</h1>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="cv.html">CV</a>
-            <a href="contact.html">Contact Me</a>
-            <a href="fun.html">For Fun</a>
-        </nav>
+        <h1 id="header">Lily Qin</h1>
     </header>
+    <nav>
+        <a href="../index.html" class="navlinks">Home</a>
+        <a href="cv.html" class="navlinks">CV</a>
+        <a href="contact.html" class="navlinks">Contact Me</a>
+        <a href="fun.html" class="navlinks">For Fun</a>
+    </nav>
     <div class = "main">
-        <h2>
-            <p>Contact Me</p>
-        </h2>
-        <form>
-            <label>Your name (required) <input type="text" required></label>
-            <label>Your email <input type="email"></label>
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <label>Your name (required) <input type="text" id="name" required></label>
+            <label>Your email <input type="email" id="email" required></label>
             <label>Your comment</label><br>
-            <textarea rows="5" cols="40"></textarea>
-            <input type="submit" value="SEND">
+            <textarea rows="5" cols="40" id="message" required></textarea>
+            <button onclick="checkButtons()" type="submit">SEND</button>
         </form>
+        <p id="validationMessage">Please fill out all fields of the form correctly :)</p>
         <table>
             <tr>
                 <th>Contact Method</th>
@@ -45,12 +48,12 @@
             </tr>
             <tr>
                 <td>Linkedin</td>
-                <td><a href="https://www.linkedin.com/in/lily-qin7/"">https://www.linkedin.com/in/lily-qin7/</a></td>
+                <td><a href="https://www.linkedin.com/in/lily-qin7/">https://www.linkedin.com/in/lily-qin7/</a></td>
             </tr>
         </table>
     </div>
     <footer>
-        <p>&copy; 2025 Lily Qin. All rights reserved.</p>
+        <p>&copy;<span id="copyYear"></span>Lily Qin. All rights reserved.</p>
     </footer>
 </body>
 </html>
