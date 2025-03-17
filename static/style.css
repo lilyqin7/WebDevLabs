@@ -56,6 +56,10 @@ form button {
     display: none;
 }
 
+#ReadMoreBTN {
+    display: block;
+}
+
 #validationMessage {
     display: none;
     text-align: center;
