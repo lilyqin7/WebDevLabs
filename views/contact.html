@@ -23,34 +23,40 @@
         <a href="contact.html" class="navlinks">Contact Me</a>
         <a href="fun.html" class="navlinks">For Fun</a>
     </nav>
-    <div class = "main">
-        <h2>Contact Me</h2>
-        <form id="contactForm">
-            <label>Your name (required) <input type="text" id="name" required></label>
-            <label>Your email <input type="email" id="email" required></label>
-            <label>Your comment</label><br>
-            <textarea rows="5" cols="40" id="message" required></textarea>
-            <button onclick="checkButtons()" type="submit">SEND</button>
-        </form>
-        <p id="validationMessage">Please fill out all fields of the form correctly :)</p>
-        <table>
-            <tr>
-                <th>Contact Method</th>
-                <th>Description</th>
-            </tr>
-            <tr>
-                <td>Email</td>
-                <td>lilyq@andrew.cmu.edu</td>
-            </tr>
-            <tr>
-                <td>Phone</td>
-                <td>510-507-8321</td>
-            </tr>
-            <tr>
-                <td>Linkedin</td>
-                <td><a href="https://www.linkedin.com/in/lily-qin7/">https://www.linkedin.com/in/lily-qin7/</a></td>
-            </tr>
-        </table>
+    <div class = "mainLayout">
+        <div id="item1" class="flexItem"> 
+            <h2>Find Me</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6073.014168828076!2d-79.94278892491697!3d40.44191235410765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f21f0b642f95%3A0xc30de693a6fd1a29!2sDonner%20House!5e0!3m2!1sen!2sus!4v1742775505363!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <table>
+                <tr>
+                    <th>Contact Method</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>lilyq@andrew.cmu.edu</td>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td>510-507-8321</td>
+                </tr>
+                <tr>
+                    <td>Linkedin</td>
+                    <td><a href="https://www.linkedin.com/in/lily-qin7/">https://www.linkedin.com/in/lily-qin7/</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="item2" class="flexItem">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <label>Your name (required) <input type="text" id="name" required></label>
+                <label>Your email <input type="email" id="email" required></label>
+                <label>Your comment</label><br>
+                <textarea rows="5" cols="40" id="message" required></textarea>
+                <button onclick="checkButtons()" type="submit">SEND</button>
+            </form>
+            <p id="validationMessage">Please fill out all fields of the form correctly :)</p>
+        </div>
     </div>
     <footer>
         <p>&copy;<span id="copyYear"></span>Lily Qin. All rights reserved.</p>

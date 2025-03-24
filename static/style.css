@@ -44,9 +44,9 @@ form button {
     color: white;
 }
 
-#FavList {
+/* #FavList {
     display: none;
-}
+} */
 
 #SeeMoreBTN {
     border-radius: 15px;
@@ -63,4 +63,34 @@ form button {
 #validationMessage {
     display: none;
     text-align: center;
+}
+
+.funIMG {
+    border-radius: 100%;
+}
+
+.mainLayout {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.item1, .item2, .item3, .item4 {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.leftColumn, .rightColumn {
+    flex: 1;
+    min-width: 300px;
+}
+
+.leftColumn, .rightColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

@@ -23,14 +23,32 @@
         <a href="contact.html" class="navlinks">Contact Me</a>
         <a href="fun.html" class="navlinks">For Fun</a>
     </nav>
-    <div class = "main">
-        <h2>Things I love to do for fun</h2>
-        <button id="SeeMoreBTN" onclick="showList()">Click to see...</button>
-        <ul id="FavList">
-            <li>Crochet clothes or small stuffed animals</li>
-            <li>Bake macarons or swiss roll cakes or anything involving meringue</li>
-            <li>Make boba</li>
-        </ul>
+    <div class = "mainLayout">
+        <div class="leftColumn">
+            <div id="item1" class="flexItem">
+                <h2>Things I love to do for fun</h2>
+                <!-- <button id="SeeMoreBTN" onclick="showList()">Click to see...</button> -->
+                <ul id="FavList">
+                    <li>Crochet clothes or small stuffed animals</li>
+                    <li>Bake macarons or swiss roll cakes or anything involving meringue</li>
+                    <li>Make boba</li>
+                </ul>
+            </div>
+            <div id="item3" class="flexItem">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/mwNzyRCgHps?si=8FN5shIRMYpnsMKG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            
+        </div>
+        <div class="rightColumn">
+            <div id="item2" class="flexItem">
+                <img src = "../static/download.jpg" alt = "Lily Qin" class="funIMG">
+            </div>
+            <div id="item4" class="flexItem">
+                <h2>Need Some Advice?</h2>
+                <p id="adviceText">Click the button to get a random piece of advice!</p>
+                <button onclick="getAdvice()">Get Advice</button>
+            </div>
+        </div>
     </div>
     <footer>
         <p>&copy;<span id="copyYear"></span>Lily Qin. All rights reserved.</p>

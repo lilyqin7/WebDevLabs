@@ -73,10 +73,10 @@ function addYear() {
     document.getElementById("copyYear").textContent = currentYear;
 }
 
-function showList() {
-    document.getElementById("FavList").style.display = "block";
-    document.getElementById("SeeMoreBTN").style.display = "none";
-}
+// function showList() {
+//     document.getElementById("FavList").style.display = "block";
+//     document.getElementById("SeeMoreBTN").style.display = "none";
+// }
 
 $("#ReadMoreBTN").click(function () {
     $("#fullBio").slideDown();
@@ -101,4 +101,16 @@ function checkButtons() {
     } else {
         validationMessage.style.display = "none";
     }
+}
+
+function getAdvice() {
+    fetch("https://api.adviceslip.com/advice")
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("adviceText").innerText = data.slip.advice;
+        })
+        .catch(error => {
+            document.getElementById("adviceText").innerText = "Oops! Something went wrong. Try again.";
+            console.error("Error fetching advice:", error);
+        });
 }
