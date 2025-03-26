@@ -73,44 +73,31 @@ function addYear() {
     document.getElementById("copyYear").textContent = currentYear;
 }
 
-// function showList() {
-//     document.getElementById("FavList").style.display = "block";
-//     document.getElementById("SeeMoreBTN").style.display = "none";
-// }
-
-$("#ReadMoreBTN").click(function () {
-    $("#fullBio").slideDown();
-    $("#ReadMoreBTN").hide();
-    $("#ReadLessBTN").show();
-});
-
-$("#ReadLessBTN").click(function () {
-    $("#fullBio").slideUp();
-    $("#ReadMoreBTN").show();
-    $("#ReadLessBTN").hide();
-});
-
-
-function checkButtons() {
-    var name = document.getElementById("name");
-    var email = document.getElementById("email");
-    var message = document.getElementById("message");
-    var validationMessage = document.getElementById("validationMessage");
-    if (!name.checkValidity() || !email.checkValidity() || !message.checkValidity()) {
-        validationMessage.style.display = "block";
-    } else {
-        validationMessage.style.display = "none";
-    }
+function showList() {
+    document.getElementById("FavList").style.display = "block";
+    document.getElementById("SeeMoreBTN").style.display = "none";
 }
 
-function getAdvice() {
-    fetch("https://api.adviceslip.com/advice")
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById("adviceText").innerText = data.slip.advice;
-        })
-        .catch(error => {
-            document.getElementById("adviceText").innerText = "Oops! Something went wrong. Try again.";
-            console.error("Error fetching advice:", error);
+document.addEventListener("DOMContentLoaded", function () {
+    let menuIcon = document.getElementById("menu-icon");
+    let navLinks = document.querySelector(".nav-container");
+    if (menuIcon && navLinks) {
+        menuIcon.addEventListener("click", function() {
+            if (window.innerWidth <= 768) {
+                navLinks.classList.toggle("active");
+            }
         });
+    }
+});
+
+function activeNavigation() {
+    let currPage = window.location.pathname.split("/").pop();;
+    let navLinks = document.querySelectorAll(".navlinks");
+    navLinks.forEach(link => link.classList.remove("active"));
+    navLinks.forEach(link => {
+        let linkPage = link.getAttribute("href");
+        if (linkPage === currPage) {
+            link.classList.add("active");
+        }
+    });
 }

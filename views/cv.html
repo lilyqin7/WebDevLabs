@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/template.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -13,48 +13,49 @@
     <meta name="description" content="Lily's Professional Website">
     <title>Lily Qin</title>
 </head>
-<body onload="addYear()">
-    <header>
-        <h1 id="header">Lily Qin</h1>
-    </header>
-    <nav>
-        <a href="../index.html" class="navlinks">Home</a>
-        <a href="cv.html" class="navlinks">CV</a>
-        <a href="contact.html" class="navlinks">Contact Me</a>
-        <a href="fun.html" class="navlinks">For Fun</a>
-    </nav>
-    <div class = "main">
-        <h2>Curriculum Vitae</h2>
-        <table>
-            <tr>
-                <th>Name</th>
-                <th>Description</th>
-            </tr>
-            <tr>
-                <td>CMU CS Academy</td>
-                <td>Answer support tickets for CS education platform</td>
-            </tr>
-            <tr>
-                <td>CMU HCII Research Assistant</td>
-                <td>Conduct literature review and content analysis of texts related to workplace surveillance and resistance tactics</td>
-            </tr>
-            <tr>
-                <td>CMU SWE Events Chair</td>
-                <td>Manage logistics and budget of monthly events including info sessions and various craft activities</td>
-            </tr>
-            <tr>
-                <td>PLUS</td>
-                <td>Tutor middle school students in math</td>
-            </tr>
-            <tr>
-                <td>Apex Social Chair</td>
-                <td>Plan social events</td>
-            </tr>
-        </table>
-        <p><a href = "../static/Lily Qin Resume.pdf" target ="_blank">My resume (pdf)</a></p>
+<body onload="activeNavigation()">
+    <div class="grid-container">
+        <header><a class="flicker-text">Lily Qin</a></header>
+        <nav>
+            <i class="fas fa-bars" id="menu-icon"></i>
+            <div class="nav-container">
+                <a href="../template.html" class="navlinks">Home</a>
+                <a href="cv.html" class="navlinks">CV</a>
+                <a href="contact.html" class="navlinks">Contact Me</a>
+                <a href="fun.html" class="navlinks">For Fun</a>
+            </div>
+        </nav>
+        <summary>
+            Curriculum Viate
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>CMU CS Academy</td>
+                    <td>Answer support tickets for CS education platform</td>
+                </tr>
+                <tr>
+                    <td>CMU HCII Research Assistant</td>
+                    <td>Conduct literature review and content analysis of texts related to workplace surveillance and resistance tactics</td>
+                </tr>
+                <tr>
+                    <td>CMU SWE Events Chair</td>
+                    <td>Manage logistics and budget of monthly events including info sessions and various craft activities</td>
+                </tr>
+                <tr>
+                    <td>PLUS</td>
+                    <td>Tutor middle school students in math</td>
+                </tr>
+                <tr>
+                    <td>Apex Social Chair</td>
+                    <td>Plan social events</td>
+                </tr>
+            </table>
+            <p><a href = "../static/Lily Qin Resume.pdf" target ="_blank">My resume (pdf)</a></p>
+        </summary>
+        <footer>&copy; 2025 Lily Qin. All rights reserved.</footer>
     </div>
-    <footer>
-        <p>&copy;<span id="copyYear"></span>Lily Qin. All rights reserved.</p>
-    </footer>
 </body>
 </html>
